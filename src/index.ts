@@ -126,7 +126,7 @@ class Request {
     } else {
       // 存在多个需要取消请求的地址
       url.forEach(u => {
-        const sourceIndex = this.getSourceIndex(u)
+        const sourceIndex = this.getCancelSourceIndex(u)
         sourceIndex &&
           sourceIndex >= 0 &&
           this.cancelRequestSource?.[sourceIndex][u]()
